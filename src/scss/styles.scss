@@ -1,2 +1,137 @@
 // Here goes your CSS
 @import 'layout/main';
+
+* {
+  outline: none;
+}
+
+input {
+  border: 0;
+  box-sizing: border-box;
+}
+
+.popup {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.popup.show {
+  display: flex;
+}
+
+.modal-box {
+  width: 214px;
+  padding: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  background-color: #fff;
+  text-align: center;
+
+  .btn-close {
+    position: fixed;
+    top: -5px;
+    right: -6px;
+    width: 27px;
+    height: 27px;
+    border: 0 solid #fff;
+    border-radius: 50%;
+    background-color: #000;
+    transform: rotate(45deg);
+    z-index: 1;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+
+    .close {
+      position: relative;
+      top: -4px;
+      right: 1px;
+      font-size: 30px;
+      color: #fff;
+    }
+  }
+
+  .modal-title {
+    font-family: 'Lato', sans-serif;
+    font-family: 'Lobster', cursive;
+    font-size: 24px;
+    padding: 8px 0 0;
+    margin: 0;
+  }
+
+  .input-box {
+    width: 204px;
+    display: inline-block;
+
+    input[type = Email], input[type = Password] {
+      display: flex;
+      justify-content: center;
+      margin: 16px auto 15px;
+      border: 1px solid #000;
+      font-size: 11px;
+      padding: 14px 20px;
+      width: 100%;
+    }
+
+    .checked {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      font-size: 14px;
+
+      input[type = CheckBox] {
+        position: relative;
+        cursor: pointer;
+        margin: 0 12px 0 0;
+      }
+
+      input[type = CheckBox]:before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        top: 0;
+        left: 0;
+        border: 1px solid #000;
+        background-color: #fff;
+      }
+
+      input[type = CheckBox]:checked:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 5px;
+        width: 6px;
+        height: 12px;
+        border: solid #000;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+    }
+
+    input[type = Submit] {
+      background-color: #000;
+      text-transform: uppercase;
+      width: 100%;
+      margin: 25px auto 6px;
+      font-size: 11px;
+      text-align: center;
+      padding: 14px;
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+}
