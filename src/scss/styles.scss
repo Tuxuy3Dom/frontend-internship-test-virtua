@@ -68,7 +68,7 @@ input {
     margin: 0;
   }
 
-  .input-box {
+  .form-input {
     width: 204px;
     display: inline-block;
 
@@ -132,6 +132,10 @@ input {
       padding: 14px;
       color: #fff;
       cursor: pointer;
+    }
+
+    input[type = Submit]:hover {
+      background-color: #fd878e;
     }
   }
 }
