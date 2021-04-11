@@ -71,15 +71,19 @@ input {
   .form-input {
     width: 204px;
     display: inline-block;
+    overflow: hidden;
 
-    input[type = Email], input[type = Password] {
+    .field {
       display: flex;
       justify-content: center;
-      margin: 16px auto 15px;
+      margin: 16px auto 16px;
       border: 1px solid #000;
-      font-size: 11px;
-      padding: 14px 20px;
-      width: 100%;
+
+      input {
+        width: 100%;
+        padding: 14px 20px 14px;
+        font-size: 11px;
+      }
     }
 
     .checked {
@@ -88,13 +92,13 @@ input {
       width: 100%;
       font-size: 14px;
 
-      input[type = CheckBox] {
+      .checkBox {
         position: relative;
         cursor: pointer;
         margin: 0 12px 0 0;
       }
 
-      input[type = CheckBox]:before {
+      .checkBox:before {
         content: '';
         display: block;
         position: absolute;
@@ -106,7 +110,7 @@ input {
         background-color: #fff;
       }
 
-      input[type = CheckBox]:checked:after {
+      .checkBox:checked:after {
         content: '';
         display: block;
         position: absolute;
@@ -122,11 +126,11 @@ input {
       }
     }
 
-    input[type = Submit] {
+    .submit {
       background-color: #000;
       text-transform: uppercase;
       width: 100%;
-      margin: 25px auto 6px;
+      margin: 25px auto 3px;
       font-size: 11px;
       text-align: center;
       padding: 14px;
@@ -134,8 +138,13 @@ input {
       cursor: pointer;
     }
 
-    input[type = Submit]:hover {
+    .current {
       background-color: #fd878e;
+    }
+
+    .error {
+      border-bottom: 1px solid red;
+      overflow: hidden;
     }
   }
 }

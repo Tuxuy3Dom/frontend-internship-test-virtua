@@ -16,18 +16,24 @@
     </section>
     <div class="popup">
       <!-- Here goes your popup form HTML code -->
-      <form class="modal-box" action="" method="post">
+      <section class="modal-box" action="">
         <button class="btn-close" type="button">
           <span class="close">+</span>
         </button>
         <h5 class="modal-title">Login</h5>
-        <div class="form-input">
-          <input type="Email" name="" placeholder="E-mail">
-          <input type="Password" name="" placeholder="Password">
-          <label class="checked"><input type="CheckBox" name="">I agree to terms & conditions.</label>
-          <input class="submit" type="Submit" name="" placeholder="SUBMIT">
-        </div>
-      </form>
+        <form class="form-input">
+          <div class="field">
+            <input class="email" type="Email" placeholder="E-mail">
+          </div>
+          <div class="field">
+            <input class="password" type="Password" placeholder="Password">
+          </div>
+          <label class="checked">
+            <input class="checkBox" type="CheckBox">I agree to terms & conditions.
+          </label>
+          <input class="submit" type="submit" value="SUBMIT" disabled>
+        </form>
+      </section>
     </div>
     <script src="js/index.min.js" charset="utf-8"></script>
   </body>
